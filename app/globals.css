@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+/* CSS Variables - 네이버 스타일 화이트/그린 테마 */
+:root {
+  /* 하얀 배경 + 네이버 초록 */
+  --bg-color: #ffffff;
+  --text-color: #00c73c;
+  --text-secondary: #03c75a;
+  --text-tertiary: #00d840;
+  --border-color: rgba(0, 199, 60, 0.15);
+  --accent-color: #00c73c;
+  --text-dark: #1a1a1a;
+}
+
+@theme inline {
+  --font-sans: var(--font-space-grotesk), "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden; /* 스크롤 비활성화 */
+  height: 100vh;
+}
+
+body {
+  font-family: var(--font-space-grotesk), "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-weight: 300;
+  line-height: 1.8;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+/* 배경 - 깔끔한 화이트 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: #ffffff;
+  opacity: 1;
+}
+
+/* 미묘한 그린 포인트 */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 199, 60, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(0, 199, 60, 0.02) 0%, transparent 40%);
+  opacity: 1;
+}
+
+/* 타이포그래피 - 네이버 스타일 */
+h1, h2, h3 {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--text-color);
+  margin-bottom: 2.5rem;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+}
+
+p, li {
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #333333;
+  margin-bottom: 1.25rem;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 강조 스타일 - 텍스트만 */
+.highlight {
+  color: var(--text-color);
+  font-weight: 600;
+  display: inline;
+}
+
+.primary-text {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* 카드 스타일 제거 - 공간만 */
+.card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+/* 전환 애니메이션 - 고영향 cubic-bezier */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.98) translateY(-20px);
+  }
+}
+
+.slide-enter {
+  animation: slideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide-exit {
+  animation: slideOut 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 심플한 플로팅 효과 */
+@keyframes floatingDot {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-600px) translateX(30px);
+    opacity: 0;
+  }
+}
+
+/* 플로팅 도트 컨테이너 */
+.shooting-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.shooting-star-animated {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0, 199, 60, 0.4);
+  border-radius: 50%;
+  animation: floatingDot 10s ease-in-out forwards;
+}
+
+.shooting-star-animated::before {
+  display: none;
+}
+
+/* 인용구 스타일 - 네이버 스타일 */
+blockquote {
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  padding: 0 0 0 2rem;
+  border-left: 4px solid var(--text-color);
+  margin: 3rem 0;
+  background: transparent;
+  color: #333333;
+  box-shadow: none;
+  position: relative;
+  line-height: 1.6;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+blockquote::before {
+  display: none;
+}
+
+/* 스크롤바 숨김 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -29,7 +29,7 @@ export default function Home() {
         onNavigateToSpace={handleNavigateToSpace}
         onNavigateToHistory={handleNavigateToHistory}
         currentSlide={currentSlide}
-        totalSlides={13}
+        totalSlides={16}
       />
       
       <SlideContainer onSlideChange={setCurrentSlide}>
@@ -57,7 +57,7 @@ export default function Home() {
                   border: '1px solid var(--border-color)'
                 }}>
                   <img 
-                    src="/6페이지 학생 활동 사진 1.jpg" 
+                    src="/page-6-activity-1.jpg" 
                     alt="디지털 체험"
                     style={{
                       width: '100%',
@@ -80,7 +80,7 @@ export default function Home() {
                   border: '1px solid var(--border-color)'
                 }}>
                   <img 
-                    src="/6페이지 학생 활동 사진 2.jpg" 
+                    src="/page-6-activity-2.jpg" 
                     alt="역동적 체험"
                     style={{
                       width: '100%',
@@ -103,7 +103,7 @@ export default function Home() {
                   border: '1px solid var(--border-color)'
                 }}>
                   <img 
-                    src="/6페이지 학생 활동 사진 3.jpg" 
+                    src="/page-6-activity-3.jpg" 
                     alt="창작자 체험"
                     style={{
                       width: '100%',
@@ -131,7 +131,7 @@ export default function Home() {
               justifyContent: 'center'
             }}>
               <img 
-                src="/8페이지 사진.jpg" 
+                src="/page-8-photo.jpg" 
                 alt="우주 프로젝트 학생 활동"
                 style={{
                   width: '100%',
@@ -164,7 +164,7 @@ export default function Home() {
                   justifyContent: 'center'
                 }}>
                   <img 
-                    src="/9페이지 미리캔버스 작업.jpg" 
+                    src="/page-9-miricanvas.jpg" 
                     alt="미리캔버스 작업물"
                     style={{
                       width: '100%',
@@ -190,7 +190,7 @@ export default function Home() {
                   justifyContent: 'center'
                 }}>
                   <img 
-                    src="/9페이지 학생활동 사진.jpg" 
+                    src="/page-9-activity.jpg" 
                     alt="우주 프로젝트 학생 활동"
                     style={{
                       width: '100%',
@@ -202,48 +202,6 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
-          </div>
-        </Slide>
-
-        {/* 페이지 10: 우주 프로젝트 - 놂삶앎 축제 */}
-        <Slide>
-          <div className="max-w-5xl mx-auto space-y-10">
-            <div>
-              <h2>우주 프로젝트 - 놂삶앎 축제</h2>
-              <h3 style={{ color: 'var(--text-secondary)', fontWeight: 400 }}>
-                놂삶앎 나눔 축제: 지식의 향유
-              </h3>
-            </div>
-            
-            <div style={{ 
-              width: '100%',
-              height: '520px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              filter: 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.1))',
-              borderRadius: '0.25rem'
-            }}>
-              <video 
-                controls
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                  borderRadius: '0.25rem',
-                  backgroundColor: '#000'
-                }}
-              >
-                <source src="/10페이지 놂삶앎 축제 우주 프로젝트.mp4" type="video/mp4" />
-                영상을 재생할 수 없습니다.
-              </video>
-            </div>
-            
-            <div className="space-y-8">
-              <p>
-                학생이 '큐레이터'가 되어 동료 초대. 배운 지식을 직접 설명하고 공유.
-              </p>
             </div>
           </div>
         </Slide>
@@ -278,7 +236,7 @@ export default function Home() {
               justifyContent: 'center'
             }}>
               <img 
-                src="/신석기 빗살무늬토기 만들기.jpg" 
+                src="/neolithic-pottery.jpg" 
                 alt="빗살무늬토기 만들기"
                 style={{
                   width: '100%',
@@ -352,7 +310,7 @@ export default function Home() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="/19페이지 사진.jpg" 
+                  src="/page-19-photo.jpg" 
                   alt="삼국시대 피구 활동"
                   style={{
                     width: '100%',
@@ -407,7 +365,7 @@ export default function Home() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="/20페이지 삼국시대 문화유산.jpg" 
+                    src="/page-20-heritage.jpg"
                   alt="삼국시대 문화유산"
                   style={{
                     width: '100%',
@@ -538,6 +496,142 @@ export default function Home() {
                   style={{ border: 'none' }}
                   title="다시 쓰는 조선왕조실록 2"
                 />
+              </div>
+            </div>
+          </div>
+        </Slide>
+
+        {/* 페이지 13: 2026학년도 운영 계획 */}
+        <Slide>
+          <div className="h-full flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
+            <h2>2026학년도 운영 계획</h2>
+          </div>
+        </Slide>
+
+        {/* 페이지 14: 에듀테크 기반 학급 운영 */}
+        <Slide>
+          <div className="max-w-5xl mx-auto space-y-12">
+            <div>
+              <h2>에듀테크 기반 학급 운영: '상태창'</h2>
+              <h3 style={{ color: 'var(--text-secondary)', fontWeight: 400 }}>
+                플랫폼과 기술이 결합한 스마트한 교실 생태계
+              </h3>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <h3>플랫폼 활용 전략</h3>
+                <ul className="space-y-4" style={{ listStyle: 'none', paddingLeft: 0 }}>
+                  <li>• 학생 개별 역량(경험치/능력치) 시각화로 성취감 고취</li>
+                  <li>• 데이터 기반의 체계적인 행동 발달 및 학습 이력 관리</li>
+                  <li>• 학급 활동과 연동된 게임화(Gamification) 요소 적용</li>
+                </ul>
+              </div>
+              
+              <div className="space-y-6">
+                <h3>키오스크 활용</h3>
+                <ul className="space-y-4" style={{ listStyle: 'none', paddingLeft: 0 }}>
+                  <li>• 출석 확인 및 학급운영플랫폼 로그인 자동화 시스템 구축</li>
+                  <li>• 직접 개발한 키오스크 프로그램을 통한 등교 루틴의 디지털화</li>
+                  <li>• 학생의 활동 데이터를 플랫폼과 실시간 연동하여 운영 효율성 극대화</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Slide>
+
+        {/* 페이지 15: 상태창 플랫폼 */}
+        <Slide>
+          <div style={{ 
+            width: '100%',
+            height: 'calc(100vh - 80px)',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1.5rem',
+            padding: '2rem 0'
+          }}>
+            <div style={{ 
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '1rem'
+            }}>
+              <p style={{ 
+                fontSize: '1.1rem',
+                margin: 0,
+                color: 'var(--text-secondary)'
+              }}>
+                로그인이 필요한 경우 새 창에서 열어주세요
+              </p>
+              <button
+                onClick={() => window.open('https://statup.kr/', '_blank')}
+                style={{
+                  padding: '0.875rem 2rem',
+                  fontSize: '1.125rem',
+                  fontWeight: 500,
+                  backgroundColor: 'var(--text-primary)',
+                  color: 'var(--bg-primary)',
+                  border: 'none',
+                  borderRadius: '0.5rem',
+                  cursor: 'pointer',
+                  transition: 'opacity 0.2s ease',
+                  fontFamily: 'inherit'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+              >
+                새 창에서 상태창 열기 ↗
+              </button>
+            </div>
+            
+            <iframe
+              src="https://statup.kr/"
+              width="100%"
+              style={{ 
+                border: '1px solid var(--border-color)',
+                borderRadius: '0.5rem',
+                flex: 1,
+                minHeight: 0
+              }}
+              title="상태창 플랫폼"
+            />
+          </div>
+        </Slide>
+
+        {/* 페이지 16: 진로 프로젝트 */}
+        <Slide>
+          <div className="max-w-5xl mx-auto space-y-12">
+            <div>
+              <h2>진로 프로젝트: '안녕, 내 일!'</h2>
+              <h3 style={{ color: 'var(--text-secondary)', fontWeight: 400 }}>
+                창체·실과 연계 실전형 직업 체험 프로그램
+              </h3>
+            </div>
+            
+            <div className="space-y-10">
+              <div className="space-y-4">
+                <h3>교육과정 재구성 전략</h3>
+                <ul className="space-y-3" style={{ listStyle: 'none', paddingLeft: 0 }}>
+                  <li>• 실과 6단원(나의 진로) 및 창의적 체험활동 진로 영역 통합 운영</li>
+                  <li>• 진로교육원 체험 활동 연계를 통한 진로 탐색의 심화</li>
+                </ul>
+              </div>
+              
+              <div className="space-y-4">
+                <h3>주요 활동 내용</h3>
+                <ul className="space-y-3" style={{ listStyle: 'none', paddingLeft: 0 }}>
+                  <li>• 직업 체험 부스 운영: '놂삶앎 축제'와 연계하여 키자니아와 비슷한 직업 체험 부스 운영 예정</li>
+                  <li>• 자기주도적 기획: 학생들이 직접 직업인이 되어 부스를 설계하고 서비스를 제공</li>
+                </ul>
+              </div>
+              
+              <div className="space-y-4">
+                <h3>기대 효과</h3>
+                <ul className="space-y-3" style={{ listStyle: 'none', paddingLeft: 0 }}>
+                  <li>• 미래의 나(Tomorrow)와 나의 직업(Job)을 만나는 입체적 경험</li>
+                  <li>• 실제적인 직무 체험을 통한 소질 발견 및 주체적인 진로 설계 역량 강화</li>
+                </ul>
               </div>
             </div>
           </div>

@@ -29,7 +29,7 @@ export default function Home() {
         onNavigateToSpace={handleNavigateToSpace}
         onNavigateToHistory={handleNavigateToHistory}
         currentSlide={currentSlide}
-        totalSlides={16}
+        totalSlides={15}
       />
       
       <SlideContainer onSlideChange={setCurrentSlide}>
@@ -374,41 +374,6 @@ export default function Home() {
                     filter: 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.1))',
                     borderRadius: '0.25rem'
                   }}
-                />
-              </div>
-            </div>
-          </div>
-        </Slide>
-
-        {/* 페이지 11: 추체험 ④ 조선시대 */}
-        <Slide>
-          <div className="max-w-5xl mx-auto space-y-16">
-            <div>
-              <h2>추체험 ④ 조선시대</h2>
-              <h3 style={{ color: 'var(--text-secondary)', fontWeight: 400 }}>
-                에듀테크 · 예체능 연계 추체험
-              </h3>
-            </div>
-            
-            <div className="space-y-10">
-              <div className="space-y-4">
-                <p style={{ fontWeight: 500 }}>[핵심]</p>
-                <p>학급운영플랫폼 '상태창'으로 학습 상태를 공유하며 진행하는 에듀테크형 추체험</p>
-              </div>
-              
-              <div style={{ 
-                width: '100%',
-                height: '420px',
-                border: '1px solid var(--border-color)',
-                borderRadius: '0.75rem',
-                overflow: 'hidden'
-              }}>
-                <iframe
-                  src="https://statup.kr/student-login"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 'none' }}
-                  title="상태창 로그인"
                 />
               </div>
             </div>
